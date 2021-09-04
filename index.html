@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>My Excel</title>
+</head>
+<body>
+    <!-- Container is the main container which will contain the whole Excel Clone -->
+    <div class="container">
+        <div class="title-bar">New Untitled - Excel</div>        
+        <div class="menu-bar">
+            <div class="menu-bar-file menu-item">File</div>
+            <div class="menu-bar-home menu-item selected">Home</div>
+            <div class="menu-bar-insert menu-item">Insert</div>
+            <div class="menu-bar-layout menu-item">Layout</div>
+            <div class="menu-bar-help menu-item">Help</div>
+        </div>
+        <div class="menu-icon-bar">
+            <div class="material-icons menu-icon icon-cut">content_cut</div>
+            <div class="material-icons menu-icon icon-copy">copy_all</div>
+            <div class="material-icons menu-icon icon-copy">content_paste</div>
+            
+            <select class="selector font-family-selector">
+                <option>Sans Serif</option>
+                <option>Cursive</option>
+
+            </select>
+            
+            <div class="material-icons menu-icon icon-bold">format_bold</div>
+            <div class="material-icons menu-icon icon-italic">format_italic</div>
+            <div class="material-icons menu-icon icon-underline">format_underline</div>
+            <div class="material-icons menu-icon icon-align-left">format_align_left</div>
+            <div class="material-icons menu-icon icon-align-center">format_align_center</div>
+            <div class="material-icons menu-icon icon-align-right">format_align_right</div>
+            <div class="material-icons menu-icon icon-color-fill">format_color_fill</div>
+            <div class="material-icons menu-icon icon-color-text">format_color_text</div>
+        </div>
+
+        <div class="formula-bar"></div>
+        <div class="data-container">
+            <div class="row-name-container"></div>
+            <div class="column-name-container"></div>
+            <div class="input-cells-container"></div>
+        </div>
+        <div class="sheet-bar"></div>
+    </div>
+</body>
+</html>

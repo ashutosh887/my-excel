@@ -1,0 +1,112 @@
+/* Universal Secector for this CSS File */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Creating some variables */
+:root{
+    --themeColor: #107c41;
+}
+
+body{
+    font-size: 14;
+}
+
+
+/* Stylizing the Main Container of our Excel Clone */
+.container{
+    height: 100vh;
+    border: 2px solid black;
+}
+
+/* Stylizing the Title Bar */
+.title-bar{
+    height: 5vh;
+    background: var(--themeColor);
+    color: white;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Stylizing the Menu Bar */
+.menu-bar{
+    background-color: var(--themeColor);
+    height: 5vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Stylizing all Menu Items simultaneously */
+.menu-item{
+    height: 5vh;
+    width: 10vh;
+    color: white;
+    font-size: 18;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    background-color: #0a6332;
+}
+
+.menu-item.selected:hover{
+    cursor: default;
+    background-color: white;
+}
+
+/* Highlights the selected option in the Menu Bar */
+.selected {
+    background-color: white;
+    color: var(--themeColor);
+    font-weight: 700;
+}
+
+
+/* Stylizing the Menu Icon Bar */
+.menu-icon-bar{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+}
+
+.menu-icon{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-icon:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.font-family-selector{
+    height: 4vh;
+}
+
+
+/* Stylizing the Formula Bar */
+.formula-bar{
+    height: 6vh;
+    border: 2px solid forestgreen;
+}
+
+.data-container{
+    height: 74vh;
+    border: 2px solid darkgrey;
+}
+
+.sheet-bar{
+    height: 4vh;
+    border: 2px solid seashell;
+}
