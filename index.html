@@ -1,53 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>My Excel</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Container is the main container which will contain the whole Excel Clone -->
     <div class="container">
-        <div class="title-bar">New Untitled - Excel</div>        
-        <div class="menu-bar">
-            <div class="menu-bar-file menu-item">File</div>
-            <div class="menu-bar-home menu-item selected">Home</div>
-            <div class="menu-bar-insert menu-item">Insert</div>
-            <div class="menu-bar-layout menu-item">Layout</div>
-            <div class="menu-bar-help menu-item">Help</div>
-        </div>
-        <div class="menu-icon-bar">
-            <div class="material-icons menu-icon icon-cut">content_cut</div>
-            <div class="material-icons menu-icon icon-copy">copy_all</div>
-            <div class="material-icons menu-icon icon-copy">content_paste</div>
-            
-            <select class="selector font-family-selector">
-                <option>Sans Serif</option>
-                <option>Cursive</option>
+      <div class="title-bar">New Untitled - Excel</div>
+      <div class="menu-bar">
+        <div class="menu-bar-file menu-item">File</div>
+        <div class="menu-bar-home menu-item selected">Home</div>
+        <div class="menu-bar-insert menu-item">Insert</div>
+        <div class="menu-bar-layout menu-item">Layout</div>
+        <div class="menu-bar-help menu-item">Help</div>
+      </div>
+      <div class="menu-icon-bar">
+        <div class="material-icons menu-icon icon-cut">content_cut</div>
+        <div class="material-icons menu-icon icon-copy">copy_all</div>
+        <div class="material-icons menu-icon icon-copy">content_paste</div>
 
-            </select>
-            
-            <div class="material-icons menu-icon icon-bold">format_bold</div>
-            <div class="material-icons menu-icon icon-italic">format_italic</div>
-            <div class="material-icons menu-icon icon-underline">format_underline</div>
-            <div class="material-icons menu-icon icon-align-left">format_align_left</div>
-            <div class="material-icons menu-icon icon-align-center">format_align_center</div>
-            <div class="material-icons menu-icon icon-align-right">format_align_right</div>
-            <div class="material-icons menu-icon icon-color-fill">format_color_fill</div>
-            <div class="material-icons menu-icon icon-color-text">format_color_text</div>
+        <select class="selector font-family-selector">
+          <option value="Sans Serif" style="font-family: sans-serif">
+            Sans Serif
+          </option>
+          <option value="Cursive" style="font-family: cursive">Cursive</option>
+          <option value="Verdana" style="font-family: verdana">Verdana</option>
+          <option
+            value="Franklin"
+            style="font-family: 'Franklin Gothic Medium'"
+          >
+            Franklin Gothic
+          </option>
+          <option value="Segoe" style="font-family: 'Segoe UI'">Segoe</option>
+        </select>
+
+        <select class="selector font-size-selector">
+          <option value="10">10</option>
+          <option value="12">12</option>
+          <option value="14">14</option>
+          <option value="16">16</option>
+          <option value="18">18</option>
+          <option value="20">20</option>
+          <option value="22">22</option>
+          <option value="24">24</option>
+        </select>
+
+        <div class="material-icons menu-icon icon-bold">format_bold</div>
+        <div class="material-icons menu-icon icon-italic">format_italic</div>
+        <div class="material-icons menu-icon icon-underline">
+          format_underline
+        </div>
+        <div class="material-icons menu-icon icon-align-left">
+          format_align_left
+        </div>
+        <div class="material-icons menu-icon icon-align-center">
+          format_align_center
+        </div>
+        <div class="material-icons menu-icon icon-align-right">
+          format_align_right
+        </div>
+        <div class="material-icons menu-icon icon-color-fill">
+          format_color_fill
+        </div>
+        <div class="material-icons menu-icon icon-color-text">
+          format_color_text
+        </div>
+      </div>
+
+      <div class="formula-bar"></div>
+
+      <!-- The main data container which has the Table -->
+      <div class="data-container">
+        <!-- Select all Cell in the Main Data Container -->
+        <div class="select-all"></div>
+
+        <!-- Row which contains the Column Names in the Main Data Container -->
+        <div class="column-name-container">
+          <!-- <div class="column-name colId-1" id="colCod-A">A</div>
+          <div class="column-name colId-2" id="colCod-B">B</div> -->
         </div>
 
-        <div class="formula-bar"></div>
-        <div class="data-container">
-            <div class="row-name-container"></div>
-            <div class="column-name-container"></div>
-            <div class="input-cells-container"></div>
+        <!-- Column which contains all the Row Numbers in the Main Data Container -->
+        <div class="row-name-container">
+          <!-- <div class="row-name"  id="rowId-1">1</div>
+          <div class="row-name" id="rowId-2">2</div> -->
         </div>
-        <div class="sheet-bar"></div>
+
+        <!-- The section which contains all the Editable Cells in the Main Data Container -->
+        <div class="input-cell-container">
+          <!-- <div class="cell-row">
+            <div class="input-cell" contenteditable="true" id="row-1-col-1" data="code-A"></div>
+            <div class="input-cell" contenteditable="true" id="row-1-col-2" data="code-B></div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- The Bar just below the Main Data Container -->
+      <div class="sheet-bar">
+        <div class="scroller">
+          <div class="material-icons icon-left-scroll">arrow_left</div>
+          <div class="material-icons icon-right-scroll">arrow_right</div>
+        </div>
+        <div class="material-icons icon-add">add_circle</div>
+        <div class="sheet-tab-container">
+          <div class="sheet-tab">Sheet 1</div>
+        </div>
+
+      </div>
     </div>
-</body>
+
+<!-- The jQuery CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<!-- My script.js File -->
+    <script src="/script.js"></script>
+  </body>
 </html>
