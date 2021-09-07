@@ -32,6 +32,8 @@ body{
 }
 
 
+
+
 /* Stylizing the Menu Bar */
 .menu-bar{
     background-color: var(--themeColor);
@@ -80,7 +82,7 @@ body{
     padding: 13px;
     display: flex;
     align-items: center;
-    height: 100%;
+    height: 80%;
 }
 
 .menu-icon:hover{
@@ -95,13 +97,59 @@ body{
 .selector{
     height: 4vh;
     font-size: 16px;
+    margin-right: 0.5vw;
 }
+
+.align-icon.selected{
+    background-color: lightgray;
+    color: black;
+}
+
+.style-icon.selected{
+    color: black;
+    background-color: lightgray;
+}
+
 
 /* Stylizing the Formula Bar */
 .formula-bar{
+    padding: 5px;
+    display: flex;
+    align-items: center;
     height: 6vh;
-    border: 2px solid forestgreen;
+    background-color: rgb(241, 241, 241);
 }
+
+.formula-editor{
+    background-color: white;
+    margin-left: 0.2vw;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    height: 4vh;
+    border: 2px solid var(--themeColor);
+}
+
+.selected-cell{
+    width: 10vw;
+}
+
+.function-sign img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5vw;
+    margin-right: 0.3vw;
+    width: 1.5vw;
+    color: black;
+    height: 3vh;
+}
+
+.formula-input{
+    width: 90vw;
+    outline-color: 2px solid var(--themeColor);
+}
+
 
 /* Stylizing the data container which will hold all our data */
 .data-container{
@@ -166,6 +214,14 @@ body{
     min-height: 4vh;
     border-right: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
+    outline-color: var(--themeColor );
+    overflow: hidden;
+}
+
+.input-cell.selected{
+    font-size: inherit;
+    color: black;
+    border: 2px solid var(--themeColor);
     overflow: hidden;
 }
 
@@ -174,6 +230,7 @@ body{
     height: 5vh;
     display: flex;
     align-items: center;
+    background-color: white;
 }
 
 .scroller{

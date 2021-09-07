@@ -53,18 +53,18 @@
           <option value="24">24</option>
         </select>
 
-        <div class="material-icons menu-icon icon-bold">format_bold</div>
-        <div class="material-icons menu-icon icon-italic">format_italic</div>
-        <div class="material-icons menu-icon icon-underline">
+        <div class="material-icons menu-icon icon-bold style-icon">format_bold</div>
+        <div class="material-icons menu-icon icon-italic style-icon">format_italic</div>
+        <div class="material-icons menu-icon icon-underline style-icon">
           format_underline
         </div>
-        <div class="material-icons menu-icon icon-align-left">
+        <div class="material-icons menu-icon icon-align-left align-icon selected">
           format_align_left
         </div>
-        <div class="material-icons menu-icon icon-align-center">
+        <div class="material-icons menu-icon icon-align-center align-icon">
           format_align_center
         </div>
-        <div class="material-icons menu-icon icon-align-right">
+        <div class="material-icons menu-icon icon-align-right align-icon">
           format_align_right
         </div>
         <div class="material-icons menu-icon icon-color-fill">
@@ -75,7 +75,12 @@
         </div>
       </div>
 
-      <div class="formula-bar"></div>
+      <!-- The Formula Bar -->
+      <div class="formula-bar">
+        <div class="formula-editor selected-cell"></div>
+        <div class="function-sign"><img src="https://img.icons8.com/ios/50/000000/formula-fx.png"/></div>
+        <div class="formula-editor formula-input" contenteditable="true"></div>
+      </div>
 
       <!-- The main data container which has the Table -->
       <div class="data-container">
