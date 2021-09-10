@@ -170,6 +170,7 @@ body{
     height: 4vh;
     width: 98vw;
     display: flex;
+    overflow: hidden;
 }
 
 .column-name{
@@ -201,6 +202,7 @@ body{
 .input-cell-container{
     height: 69vh;
     width: 98vw;
+    overflow: scroll;
 }
 
 .cell-row{
