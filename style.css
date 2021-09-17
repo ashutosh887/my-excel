@@ -211,6 +211,7 @@ body{
 
 .input-cell{
     display: flex;
+    font-weight: 100;
     align-items: center;
     min-width: 5vw;
     min-height: 4vh;
@@ -272,4 +273,23 @@ body{
     border-bottom: 4px solid var(--themeColor);
     padding: 2px;
     cursor: default;
+}
+
+
+/* Selection of Cells properties */
+/* These classes will be added to elements when multiple cells are selected */
+.input-cell.top-cell-selected{
+    border-top: none;
+}
+
+.input-cell.bottom-cell-selected{
+    border-bottom: 1px solid lightgray;
+}
+
+.input-cell.right-cell-selected{
+    border-right: 1px soid lightgrey;
+}
+
+.input-cell.left-cell-selected{
+    border-left: none;
 }
